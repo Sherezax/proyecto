@@ -94,7 +94,7 @@ void exportarCSV(const std::vector<double>& x, const std::vector<double>& y, con
         return;
     }
 
-    // Escribir encabezados (opcional)
+    // Escribir encabezados 
     file << "X,Y,";
     for (size_t i = 0; i < x.size(); ++i) {
         file << "Y" << i+1;
@@ -107,7 +107,7 @@ void exportarCSV(const std::vector<double>& x, const std::vector<double>& y, con
     for (size_t i = 0; i < x.size(); ++i) {
         for (size_t j = 0; j < y.size(); ++j) {
             file << x[i] << "," << y[j] << ",";
-            file << u[j][i]; // Notar el orden y[j][i] debido a cómo se manejan las filas y columnas
+            file << u[j][i]; // El orden y[j][i] es debido a cómo se manejan las filas y columnas
             if (j < y.size() - 1)
                 file << ",";
         }

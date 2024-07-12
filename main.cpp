@@ -26,7 +26,7 @@ int main() {
     
     double time_1 = seconds();
     
-    auto func = [](double x, double y) { return x * y; }; // Función de ejemplo, ajusta según sea necesario
+    auto func = [](double x, double y) { return x * x + y * y; }; // Función 
 
     // Precalcular los coeficientes B0n y Bmn
     auto [B0n_n, Bmn_mn] = precalc_inte(a, b, g, iteraciones, func);
